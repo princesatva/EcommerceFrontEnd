@@ -10,9 +10,6 @@ export default defineConfig({
     alias: {
       '@': path.resolve(__dirname, './src'),
     },
-  },
-  define: {
-    'import.meta.env.API_BASE_URL': JSON.stringify(API_BASE_URL),
   }, 
   server: {
     port: 5173,

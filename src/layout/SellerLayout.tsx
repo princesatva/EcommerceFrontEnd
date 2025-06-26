@@ -40,78 +40,8 @@ const SellerLayout = ({ children }: any) => {
   const navigate = useNavigate();
   const userEmail = localStorage.getItem("userEmail") || "seller@example.com";
 
-  const handleDeleteProduct = async (productId: number) => {
-    try {
-      // Get confirmation from user before deletion
-      Modal.confirm({
-        title: "Delete Product",
-        content:
-          "Are you sure you want to delete this product? This action cannot be undone.",
-        okText: "Yes, Delete",
-        okType: "danger",
-        cancelText: "Cancel",
-        onOk: async () => {
-          // Show loading message
-          const loadingMessage = message.loading("Deleting product...", 0);
-
-          try {
-            const accessToken = localStorage.getItem("accessToken");
-
-            if (!accessToken) {
-              message.error("Authentication error. Please login again.");
-              navigate("/login");
-              return;
-            }
-
-            const response = await deleteProduct(productId, accessToken);
-
-            // Close the loading message
-            loadingMessage();
-
-            if (response && response.success) {
-              message.success("Product deleted successfully");
-
-              // If you're maintaining product state in the parent component
-              // Update the state to remove the deleted product
-              setProducts((prevProducts) =>
-                prevProducts.filter((product) => product.id !== productId)
-              );
-
-              // Alternatively, if you're fetching products from an API
-              // You could refresh the product list
-              // fetchProducts();
-            } else {
-              message.error(response?.message || "Failed to delete product");
-            }
-          } catch (error: any) {
-            // Close the loading message
-            loadingMessage();
-
-            console.error("Delete product error:", error);
-
-            if (error.response?.status === 401) {
-              message.error("Your session has expired. Please login again.");
-              navigate("/login");
-            } else if (error.response?.data?.message) {
-              message.error(error.response.data.message);
-            } else {
-              message.error("Failed to delete product. Please try again.");
-            }
-          }
-        },
-        onCancel() {
-          message.info("Delete operation cancelled");
-        },
-      });
-    } catch (error) {
-      console.error("Error in delete confirmation:", error);
-      message.error("An unexpected error occurred. Please try again.");
-    }
-  };
-
   const handleMenuClick = (key: any) => {
     setActiveMenu(key);
-    // Navigation logic can be added here
 
     switch (key) {
       case "dashboard":

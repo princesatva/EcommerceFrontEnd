@@ -1,0 +1,48 @@
+.login-layout {
+  background: #f0f2f5;
+  min-height: 100vh;
+}
+
+.login-card {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 22px 24px;
+  background-color: #ffffff;
+}
+
+.login-title {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.login-subtitle {
+  text-align: center;
+  margin-top: 0;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.ant-form-item {
+  margin-bottom: 16px;
+}
+
+.login-button {
+  width: 100%;
+}
+
+@media (max-width: 480px) {
+  .login-card {
+    padding: 24px 16px;
+  }
+
+  .login-title h2 {
+    font-size: 24px;
+  }
+
+  .login-subtitle {
+    font-size: 16px;
+  }
+}

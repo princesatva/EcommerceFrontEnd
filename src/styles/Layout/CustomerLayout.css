@@ -1,0 +1,122 @@
+/* CustomerLayout Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.customer-header {
+  background: linear-gradient(to right, #2e86de, #00b894);
+  padding: 0 24px;
+  height: 64px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.logo-section {
+  min-width: 180px;
+}
+
+.search-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar {
+  display: flex;
+  width: 60%;
+}
+
+.search-bar input {
+  flex: 1;
+  border: none;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  padding: 0 12px;
+  font-size: 14px;
+}
+
+.search-bar .ant-btn {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: #00b894;
+  border-color: #00b894;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+}
+
+.header-icon {
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Customer Sider Style */
+.customer-sider {
+  background: linear-gradient(to right, #2e86de, #00b894);
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  margin-top: 64px;
+  height: calc(100vh - 64px);
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.customer-sider .ant-menu-item-selected {
+  background-color: #e6f7ff;
+  border-right: 3px solid #2e86de;
+}
+
+.promo-section {
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.promo-card {
+  background: linear-gradient(135deg, #2e86de20, #00b89420);
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  border: 1px solid #e8e8e8;
+}
+
+.promo-card .ant-btn {
+  background-color: #2e86de;
+  border-color: #2e86de;
+  margin-top: 8px;
+}
+
+/* Customer Content */
+.customer-content {
+  margin-top: 64px;
+  margin-left: 200px;
+  padding: 24px;
+  background: #f0f2f5;
+  min-height: calc(100vh - 64px);
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .search-bar {
+    width: 90%;
+  }
+
+  .customer-content {
+    margin-left: 0;
+    padding: 16px;
+  }
+}

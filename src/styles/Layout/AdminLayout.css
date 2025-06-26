@@ -1,0 +1,135 @@
+/* Add this to your stylesheet */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Header styles */
+.site-layout-background.ant-layout-header {
+  background: linear-gradient(
+    to right,
+    #6a5acd,
+    #4169e1
+  ); /* Purple to blue gradient */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  padding: 0 20px;
+}
+
+/* Table row hover effect */
+.ant-table-tbody > tr:hover > td {
+  background-color: rgba(106, 90, 205, 0.1) !important; /* Light purple hover */
+}
+
+.ant-table-body {
+  height: 170px;
+}
+
+.ant-layout-content {
+  height: 500px;
+}
+
+/* Inactive row styling */
+.inactive-row {
+  opacity: 0.7;
+  background-color: #f9f9f9;
+}
+
+/* Card hover effects */
+.ant-card.ant-card-hoverable:hover {
+  box-shadow: 0 4px 12px rgba(106, 90, 205, 0.25); /* Purple shadow */
+  transform: translateY(-2px);
+  transition: all 0.3s;
+}
+
+/* Status badge styling */
+.ant-badge-status-dot {
+  width: 8px;
+  height: 8px;
+}
+
+/* Table header styling */
+.ant-table-thead > tr > th {
+  background-color: #f0f0ff; /* Light purple background */
+  font-weight: 600;
+}
+
+/* Menu item active styling */
+.ant-menu-item-selected {
+  background-color: #e6e6ff !important; /* Light purple background */
+  border-right: 3px solid #6a5acd; /* Purple border */
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8a7ad8; /* Purple scrollbar thumb */
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6a5acd; /* Darker purple on hover */
+}
+
+.ant-input-search .ant-input:hover,
+.ant-input-search .ant-input:focus {
+  border-color: #6a5acd; /* Purple border */
+  box-shadow: 0 0 0 2px rgba(106, 90, 205, 0.2); /* Purple shadow */
+}
+
+/* Smooth transitions */
+.ant-table,
+.ant-statistic,
+.ant-card,
+.ant-tag,
+.ant-badge {
+  transition: all 0.3s ease;
+}
+
+/* Additional styles for purple & blue theme */
+.ant-btn-primary {
+  background-color: #6a5acd; /* Purple primary button */
+  border-color: #6a5acd;
+}
+
+.ant-btn-primary:hover,
+.ant-btn-primary:focus {
+  background-color: #5a4abf; /* Darker purple on hover */
+  border-color: #5a4abf;
+}
+
+/* Sidebar header styling */
+.sidebar-logo {
+  background-color: #93acf5; /* Blue background */
+  color: black;
+}
+
+/* Links styling */
+a {
+  color: #4169e1; /* Blue links */
+}
+
+a:hover {
+  color: #6a5acd; /* Purple on hover */
+}
+
+/* Tag colors */
+.ant-tag-blue {
+  color: #4169e1;
+  background: rgba(65, 105, 225, 0.1);
+  border-color: #4169e1;
+}
+
+.ant-tag-purple {
+  color: #6a5acd;
+  background: rgba(106, 90, 205, 0.1);
+  border-color: #6a5acd;
+}

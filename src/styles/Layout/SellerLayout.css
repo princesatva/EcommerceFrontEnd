@@ -1,0 +1,141 @@
+/* SellerLayout Styles - Light Theme */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.seller-sider {
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.06);
+}
+
+.seller-logo {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f8ff;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.quick-action {
+  padding: 16px;
+  margin-top: auto;
+  border-top: 1px solid #f0f0f0;
+  background-color: #fafafa;
+}
+
+.add-product-btn {
+  background: #52c41a;
+  border-color: #52c41a;
+  box-shadow: 0 2px 4px rgba(82, 196, 26, 0.2);
+}
+
+.add-product-btn:hover {
+  background: #73d13d;
+  border-color: #73d13d;
+}
+
+.seller-header {
+  background: linear-gradient(to right, #f5f8ff, #ffffff);
+  padding: 0 24px;
+  height: 64px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-icon {
+  font-size: 20px;
+  color: #595959;
+  cursor: pointer;
+}
+
+.header-icon:hover {
+  color: #1890ff;
+}
+
+.upload-btn {
+  background: #1890ff;
+  border-color: #1890ff;
+  box-shadow: 0 2px 4px rgba(24, 144, 255, 0.2);
+}
+
+.upload-btn:hover {
+  background: #40a9ff;
+  border-color: #40a9ff;
+}
+
+.user-dropdown {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.user-name {
+  color: #262626;
+  margin-left: 8px;
+  font-weight: 500;
+}
+
+.seller-content {
+  padding: 24px;
+  background: #f5f7fa;
+  min-height: calc(100vh - 64px);
+}
+
+/* Menu customization for light theme */
+.ant-menu-light .ant-menu-item-selected {
+  background-color: #e6f7ff;
+  border-right: 3px solid #1890ff;
+}
+
+.ant-menu-light .ant-menu-submenu-selected > .ant-menu-submenu-title {
+  color: #1890ff;
+}
+
+.ant-menu-light .ant-menu-item:hover,
+.ant-menu-light .ant-menu-submenu-title:hover {
+  color: #1890ff;
+}
+
+/* Badge customization */
+.ant-badge-count {
+  background: #1890ff;
+}
+
+@media (max-width: 768px) {
+  .seller-sider {
+    position: fixed;
+    left: 0;
+    height: 100vh;
+    z-index: 1000;
+  }
+
+  .seller-header {
+    padding: 0 16px;
+  }
+
+  .seller-content {
+    padding: 16px;
+  }
+}
